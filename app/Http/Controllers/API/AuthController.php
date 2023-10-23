@@ -21,6 +21,7 @@ class AuthController extends Controller
             'email' => 'required|string|email',
             'password' => 'required|string',
         ]);
+
         if (auth()->attempt($credentials)) {
             $user = Auth::user();
             $user['token'] = $user->createToken('Laravelia')->accessToken;
