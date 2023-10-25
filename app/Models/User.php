@@ -56,6 +56,6 @@ class User extends Authenticatable
     ];
 
     public function HoloKds() {
-        return $this->hasMany(HoloKds::class);
+        return $this->hasMany(Holokds::class);
     }
 }
